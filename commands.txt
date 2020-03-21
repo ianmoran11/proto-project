@@ -1,0 +1,3 @@
+sudo docker build -t ianmoran11/rstudio .
+
+sudo docker run -p 8787:8787 -e PASSWORD=pass -v $(pwd):/home/rstudio -v /home/ian/.local/share/renv/cache/v5/R-3.6/x86_64-pc-linux-gnu:/renv ianmoran11/rstudio

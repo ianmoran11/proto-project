@@ -1,0 +1,60 @@
+]0;/home/rstudio/analysis_folderrstudio@30720ca6770c:~/analysis_folder$ [Krstudio@30720ca6770c:~/analysis_folder$ ls
+analysis_folder.Rproj  R  renv	renv.lock  scripts
+]0;/home/rstudio/analysis_folderrstudio@30720ca6770c:~/analysis_folder$ cat renv.lock 
+{
+  "R": {
+    "Version": "3.6.2",
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://cran.rstudio.com"
+      }
+    ]
+  },
+  "Packages": {
+    "renv": {
+      "Package": "renv",
+      "Version": "0.9.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c1a367437d8a8a44bec4b9d4974cb20c"
+    }
+  }
+}
+]0;/home/rstudio/analysis_folderrstudio@30720ca6770c:~/analysis_folder$ [Krstudio@30720ca6770c:~/analysis_folder$ ls
+analysis_folder.Rproj  R  renv	renv.lock  scripts
+]0;/home/rstudio/analysis_folderrstudio@30720ca6770c:~/analysis_folder$ cd /renv/cache/
+]0;/renv/cacherstudio@30720ca6770c:/renv/cache$ LS
+bash: LS: command not found
+]0;/renv/cacherstudio@30720ca6770c:/renv/cache$ C[Kls
+v5
+]0;/renv/cacherstudio@30720ca6770c:/renv/cache$ cd v5/
+]0;/renv/cache/v5rstudio@30720ca6770c:/renv/cache/v5$ ls
+R-3.6
+]0;/renv/cache/v5rstudio@30720ca6770c:/renv/cache/v5$ R-3.6/
+bash: R-3.6/: Is a directory
+]0;/renv/cache/v5rstudio@30720ca6770c:/renv/cache/v5$ ls
+R-3.6
+]0;/renv/cache/v5rstudio@30720ca6770c:/renv/cache/v5$ cd R-3.6/
+]0;/renv/cache/v5/R-3.6rstudio@30720ca6770c:/renv/cache/v5/R-3.6$ ls
+x86_64-pc-linux-gnu
+]0;/renv/cache/v5/R-3.6rstudio@30720ca6770c:/renv/cache/v5/R-3.6$ cd x86_64-pc-linux-gnu/
+]0;/renv/cache/v5/R-3.6/x86_64-pc-linux-gnurstudio@30720ca6770c:/renv/cache/v5/R-3.6/x86_64-pc-linux-gnu$ pwd
+/renv/cache/v5/R-3.6/x86_64-pc-linux-gnu
+]0;/renv/cache/v5/R-3.6/x86_64-pc-linux-gnurstudio@30720ca6770c:/renv/cache/v5/R-3.6/x86_64-pc-linux-gnu$ ls
+askpass     cluster	drake	     generics	  httr	      magrittr	pkgconfig     Rcpp	   rprojroot	stringi      vctrs
+assertthat  codetools	DT	     ggplot2	  igraph      mailR	pkgload       readr	   rstudioapi	stringr      viridisLite
+backports   colorspace	ellipsis     ggrepel	  ini	      markdown	plogr	      readxl	   Rttf2pt1	survival     webshot
+base64enc   commonmark	evaluate     gh		  isoband     MASS	plotly	      rematch	   rtweet	sys	     whisker
+base64url   covr	extrafont    git2r	  jsonlite    Matrix	plyr	      remotes	   R.utils	systemfonts  withr
+BH	    crayon	extrafontdb  glue	  kableExtra  memoise	praise	      renv	   rversions	testthat     xfun
+boot	    crosstalk	fansi	     gtable	  KernSmooth  mgcv	prettyunits   reprex	   rvest	tibble	     xml2
+brew	    curl	farver	     haven	  knitr       mime	processx      reshape2	   scales	tidyr	     xopen
+broom	    data.table	fastmap      hexbin	  labeling    modelr	progress      rex	   selectr	tidyselect   xtable
+callr	    DBI		filelock     highr	  later       munsell	promises      rlang	   sessioninfo	tidyverse    yaml
+cellranger  dbplyr	forcats      hms	  lattice     nlme	ps	      rmarkdown    shiny	tinytex      zoo
+class	    desc	foreign      hrbrthemes   lazyeval    nnet	purrr	      R.methodsS3  sourcetools	txtq
+cli	    devtools	formattable  htmltools	  lifecycle   openssl	R6	      R.oo	   spatial	unpivotr
+clipr	    digest	fs	     htmlwidgets  lubridate   pillar	rcmdcheck     roxygen2	   stargazer	usethis
+clisymbols  dplyr	gdtools      httpuv	  magick      pkgbuild	RColorBrewer  rpart	   storr	utf8
+]0;/renv/cache/v5/R-3.6/x86_64-pc-linux-gnurstudio@30720ca6770c:/renv/cache/v5/R-3.6/x86_64-pc-linux-gnu$ 
