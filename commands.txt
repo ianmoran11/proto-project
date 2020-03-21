@@ -1,6 +1,6 @@
 sudo docker build -t ianmoran11/rstudio .
 
-sudo docker run -p 8787:8787 -e PASSWORD=pass -v $(pwd):/home/rstudio -v /home/ian/.local/share/renv:/renv ianmoran11/rstudio
+sudo docker run -p 8787:8787 -e PASSWORD=pass -e ROOT=TRUE -v $(pwd):/home/rstudio -v /home/ian/.local/share/renv:/renv ianmoran11/rstudio
 
 sudo docker run -p 8787:8787 -e PASSWORD=pass -e ROOT=TRUE -v $(pwd):/home/rstudio -v /home/ian/Downloads/renv:/renv ianmoran11/rstudio
 
