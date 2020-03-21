@@ -1,13 +1,0 @@
-]0;/home/rstudiorstudio@30720ca6770c:~$ [Krstudio@30720ca6770c:~$ ls
-analysis_folder  commands.txt  Dockerfile  kitematic
-]0;/home/rstudiorstudio@30720ca6770c:~$ cd /
-]0;/rstudio@30720ca6770c:/$ ls
-analysis_folder  bin  boot  dev  etc  home  init  lib  lib32  lib64  libexec  media  mnt  opt  proc  renv  root  run  sbin  srv  sys  tmp  usr	var
-]0;/rstudio@30720ca6770c:/$ cd r
-renv/ root/ run/  
-rstudio@30720ca6770c:/$ cd r
-renv/ root/ run/  
-rstudio@30720ca6770c:/$ cd renv/
-]0;/renvrstudio@30720ca6770c:/renv$ ls
-cache  projects  source
-]0;/renvrstudio@30720ca6770c:/renv$ c[K
