@@ -1,0 +1,32 @@
+"0","//2020-03-27 10:55:06
+data{
+    int<lower=1> N;
+    int<lower=1> N_dept;
+    int admit[N];
+    int applications[N];
+    int dept[N];
+    int male[N];
+}
+parameters{
+    vector[N_dept] a;
+    real abar;
+    real<lower=0> sigma;
+    real b;
+}
+model{
+    vector[N] p;
+    b ~ normal( 0 , 1 );
+    sigma ~ cauchy( 0 , 1 );
+    abar ~ normal( 0 , 4 );
+    a ~ normal( abar , sigma );
+    for ( i in 1:N ) {
+        p[i] = a[dept[i]] + b * male[i];
+    }
+    admit ~ binomial_logit( applications , p );
+}
+generated quantities{
+    vector[N] p;
+    for ( i in 1:N ) {
+        p[i] = a[dept[i]] + b * male[i];
+    }
+}"

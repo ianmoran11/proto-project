@@ -12,3 +12,8 @@ renv::paths$library()
 
 renv::install("drake")
 
+renv::install("drake")
+renv::install("rethinking")
+library("rethinking")
+
+renv::install("tidybayes")

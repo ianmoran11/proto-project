@@ -1,0 +1,74 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(rstan)
+library(rethinking)
+library(bayesplot)
+library(tidybayes)
+library(tidyverse)
+
+data( UCBadmit )
+UCBadmit$male <- as.integer(UCBadmit$applicant.gender=="male")
+UCBadmit$dept <- rep( 1:6 , each=2 )
+UCBadmit$applicant.gender <- NULL
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{stan,  output.var = "model"}
+//2020-03-27 10:55:06
+data{
+    int<lower=1> N;
+    int<lower=1> N_dept;
+    int admit[N];
+    int applications[N];
+    int dept[N];
+    int male[N];
+}
+parameters{
+    vector[N_dept] a;
+    real abar;
+    real<lower=0> sigma;
+    real b;
+}
+model{
+    vector[N] p;
+    b ~ normal( 0 , 1 );
+    sigma ~ cauchy( 0 , 1 );
+    abar ~ normal( 0 , 4 );
+    a ~ normal( abar , sigma );
+    for ( i in 1:N ) {
+        p[i] = a[dept[i]] + b * male[i];
+    }
+    admit ~ binomial_logit( applications , p );
+}
+generated quantities{
+    vector[N] p;
+    for ( i in 1:N ) {
+        p[i] = a[dept[i]] + b * male[i];
+    }
+}
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+model_data = compose_data(UCBadmit) %>% append(list(N_dept =6)) %>% append(list(N =12)) %>% .[-6]
+
+rstan::stan( = model,data = model_data )
+
+
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

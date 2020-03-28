@@ -1,0 +1,191 @@
+{
+    "bookdown::mathquill" : {
+        "binding" : "mathquill",
+        "description" : "Input math expressions via the MathQuill library.",
+        "interactive" : true,
+        "name" : "Input LaTeX Math",
+        "ordinal" : 9,
+        "package" : "bookdown",
+        "title" : ""
+    },
+    "bookdown::serve_book" : {
+        "binding" : "serve_book",
+        "description" : "Run bookdown::serve_book() to live preview a book.",
+        "interactive" : true,
+        "name" : "Preview Book",
+        "ordinal" : 8,
+        "package" : "bookdown",
+        "title" : ""
+    },
+    "clipr::clipr_output" : {
+        "binding" : "clipr_output",
+        "description" : "Copies the console output of a selected expression to the system clipboard",
+        "interactive" : false,
+        "name" : "Output to clipboard",
+        "ordinal" : 13,
+        "package" : "clipr",
+        "title" : ""
+    },
+    "clipr::clipr_result" : {
+        "binding" : "clipr_result",
+        "description" : "Copies the results of a selected expression to the system clipboard",
+        "interactive" : false,
+        "name" : "Value to clipboard",
+        "ordinal" : 12,
+        "package" : "clipr",
+        "title" : ""
+    },
+    "colourpicker::colourPickerAddin" : {
+        "binding" : "colourPickerAddin",
+        "description" : "Lets you easily select colours.",
+        "interactive" : true,
+        "name" : "Colour Picker",
+        "ordinal" : 7,
+        "package" : "colourpicker",
+        "title" : ""
+    },
+    "colourpicker::plotHelperAddin" : {
+        "binding" : "plotHelperAddin",
+        "description" : "Interactively pick colours to use in your plot.",
+        "interactive" : true,
+        "name" : "Plot Colour Helper",
+        "ordinal" : 6,
+        "package" : "colourpicker",
+        "title" : ""
+    },
+    "covr::addin_report" : {
+        "binding" : "addin_report",
+        "description" : "Calculates the package test coverage and opens a report, using `covr::report()`",
+        "interactive" : false,
+        "name" : "Calculate package test coverage",
+        "ordinal" : 17,
+        "package" : "covr",
+        "title" : ""
+    },
+    "devtools::test_coverage" : {
+        "binding" : "test_coverage",
+        "description" : "Calculate and report the test coverage for the current package, using `devtools::test_coverage()`.",
+        "interactive" : false,
+        "name" : "Report test coverage for a package",
+        "ordinal" : 16,
+        "package" : "devtools",
+        "title" : ""
+    },
+    "devtools::test_coverage_file" : {
+        "binding" : "test_coverage_file",
+        "description" : "Calculate and report test coverage for the current test file, using `devtools::test_coverage_file()`.",
+        "interactive" : false,
+        "name" : "Report test coverage for a file",
+        "ordinal" : 15,
+        "package" : "devtools",
+        "title" : ""
+    },
+    "devtools::test_file" : {
+        "binding" : "test_file",
+        "description" : "Run the current test file, using `devtools::test_file()`.",
+        "interactive" : false,
+        "name" : "Run a test file",
+        "ordinal" : 14,
+        "package" : "devtools",
+        "title" : ""
+    },
+    "drake::rs_addin_loadd" : {
+        "binding" : "rs_addin_loadd",
+        "description" : "Load the target identified by the symbol under the cursor position from the drake cache.",
+        "interactive" : false,
+        "name" : "loadd target at cursor",
+        "ordinal" : 4,
+        "package" : "drake",
+        "title" : ""
+    },
+    "drake::rs_addin_r_make" : {
+        "binding" : "rs_addin_r_make",
+        "description" : "Calls r_make(). Requries a `_drake.R` script.",
+        "interactive" : false,
+        "name" : "Run a drake workflow",
+        "ordinal" : 1,
+        "package" : "drake",
+        "title" : ""
+    },
+    "drake::rs_addin_r_outdated" : {
+        "binding" : "rs_addin_r_outdated",
+        "description" : "Calls r_outdated(). Requries a `_drake.R` script.",
+        "interactive" : false,
+        "name" : "See outdated drake targets",
+        "ordinal" : 3,
+        "package" : "drake",
+        "title" : ""
+    },
+    "drake::rs_addin_r_vis_drake_graph" : {
+        "binding" : "rs_addin_r_vis_drake_graph",
+        "description" : "Calls r_vis_drake_graph(). Requries a `_drake.R` script.",
+        "interactive" : false,
+        "name" : "Visualize a drake workflow",
+        "ordinal" : 2,
+        "package" : "drake",
+        "title" : ""
+    },
+    "lintr::addin_lint" : {
+        "binding" : "addin_lint",
+        "description" : "Runs lintr::lint on the current file",
+        "interactive" : true,
+        "name" : "Lint current file",
+        "ordinal" : 20,
+        "package" : "lintr",
+        "title" : ""
+    },
+    "lintr::addin_lint_package" : {
+        "binding" : "addin_lint_package",
+        "description" : "Runs lintr::lint_package",
+        "interactive" : true,
+        "name" : "Lint current package",
+        "ordinal" : 21,
+        "package" : "lintr",
+        "title" : ""
+    },
+    "pkgdown::build_site_external" : {
+        "binding" : "build_site_external",
+        "description" : "Runs pkgdown on the current package",
+        "interactive" : true,
+        "name" : "Build pkgdown",
+        "ordinal" : 11,
+        "package" : "pkgdown",
+        "title" : ""
+    },
+    "reprex::reprex_addin" : {
+        "binding" : "reprex_addin",
+        "description" : "Run `reprex::reprex()` to prepare a reproducible example for sharing.",
+        "interactive" : true,
+        "name" : "Render reprex...",
+        "ordinal" : 18,
+        "package" : "reprex",
+        "title" : ""
+    },
+    "reprex::reprex_selection" : {
+        "binding" : "reprex_selection",
+        "description" : "Prepare reprex from current selection",
+        "interactive" : false,
+        "name" : "Reprex selection",
+        "ordinal" : 19,
+        "package" : "reprex",
+        "title" : ""
+    },
+    "testit::insert_identical" : {
+        "binding" : "insert_identical",
+        "description" : "Insert the infix operator %==% from testit.",
+        "interactive" : false,
+        "name" : "Insert %==%",
+        "ordinal" : 10,
+        "package" : "testit",
+        "title" : ""
+    },
+    "vdiffr::vdiffrAddin" : {
+        "binding" : "vdiffrAddin",
+        "description" : "Compare and validate graphical test cases using vdiffr",
+        "interactive" : true,
+        "name" : "Manage visual test cases",
+        "ordinal" : 5,
+        "package" : "vdiffr",
+        "title" : ""
+    }
+}

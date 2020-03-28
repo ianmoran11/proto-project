@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585305111806.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3881538842",
+    "id" : "AA71EA97",
+    "lastKnownWriteTime" : 1585308201,
+    "last_content_update" : 1585308201540,
+    "path" : "~/setup.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "18,26",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

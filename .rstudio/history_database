@@ -1,0 +1,63 @@
+1585305115088:library(renv)
+1585305117291:renv::paths$root()
+1585305117295:renv::paths$cache()
+1585305120972:Sys.setenv(RENV_PATHS_ROOT = "/renv")
+1585305120972:Sys.setenv(RENV_PATHS_CACHE = "/renv/cache/v5/R-3.6/x86_64-pc-linux-gnu")
+1585305123770:renv::paths$root()
+1585305123774:renv::paths$cache()
+1585305123775:renv::paths$library()
+1585305128818:renv::install("drake")
+1585305239354:devtools::install_github("rmcelreath/rethinking")
+1585306343873:load("rethinking")
+1585306352469:library("rethinking")
+1585306366748:library(rethinking)
+1585306473692:data( UCBadmit )
+1585306473699:UCBadmit$male <- as.integer(UCBadmit$applicant.gender=="male")
+1585306473700:UCBadmit$dept <- rep( 1:6 , each=2 )
+1585306473701:UCBadmit$applicant.gender <- NULL
+1585306482762:m_glmm1 <- map2stan(
+1585306482778:alist(
+1585306482779:admit ~ binomial(applications,p),
+1585306482779:logit(p) <- a[dept] + b*male,
+1585306482779:a[dept] ~ normal( abar , sigma ),
+1585306482780:abar ~ normal( 0 , 4 ),
+1585306482781:sigma ~ half_normal(0,1),
+1585306482781:b ~ normal(0,1)
+1585306482782:), data=UCBadmit )
+1585306506394:m_glmm1 <- map2stan(
+1585306506398:alist(
+1585306506398:admit ~ binomial(applications,p),
+1585306506398:logit(p) <- a[dept] + b*male,
+1585306506399:a[dept] ~ normal( abar , sigma ),
+1585306506399:abar ~ normal( 0 , 4 ),
+1585306506399:sigma ~ cauchy(0,1),
+1585306506399:b ~ normal(0,1)
+1585306506399:), data=UCBadmit )
+1585306682328:m_glmm1
+1585306692327:m_glmm1 %>% precis()
+1585306698248:precis(m_glmm1)
+1585306957195:stancode(m_glmm1)
+1585307412515:knitr::opts_chunk$set(echo = TRUE)
+1585307489181:data( UCBadmit )
+1585307936146:library(rstan)
+1585307936730:library(rethinking)
+1585308111053:library(bayesplot)
+1585308160024:renv::install("tidybayes")
+1585308214464:library(tidybayes)
+1585308230309:compose_data(UCBadmit)
+1585308232935:compose_data(UCBadmit)
+1585308239809:data( UCBadmit )
+1585308239811:UCBadmit$male <- as.integer(UCBadmit$applicant.gender=="male")
+1585308239811:UCBadmit$dept <- rep( 1:6 , each=2 )
+1585308239812:UCBadmit$applicant.gender <- NULL
+1585308243298:compose_data(UCBadmit)
+1585308252281:UCBadmit
+1585308269128:compose_data(UCBadmit)
+1585308295624:compose_data(UCBadmit) %>% append(N_dept =12)
+1585308307176:library(tidyverse)
+1585308310737:compose_data(UCBadmit) %>% append(N_dept =12)
+1585308318448:compose_data(UCBadmit) %>% append(list(N_dept =12))
+1585308339185:compose_data(UCBadmit) %>% append(list(N_dept =6)) %>% append(list(N =12))
+1585308361471:compose_data(UCBadmit) %>% append(list(N_dept =6)) %>% append(list(N =12)) %>% .[-6]
+1585308372273:model_data = compose_data(UCBadmit) %>% append(list(N_dept =6)) %>% append(list(N =12)) %>% .[-6]
+1585308375666:model_data

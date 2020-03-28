@@ -1,0 +1,24 @@
+library(rethinking)
+
+
+# prep data
+data( UCBadmit )
+UCBadmit$male <- as.integer(UCBadmit$applicant.gender=="male")
+UCBadmit$dept <- rep( 1:6 , each=2 )
+UCBadmit$applicant.gender <- NULL
+
+# varying intercepts model
+m_glmm1 <- map2stan(
+  alist(
+    admit ~ binomial(applications,p),
+    logit(p) <- a[dept] + b*male,
+    a[dept] ~ normal( abar , sigma ),
+    abar ~ normal( 0 , 4 ),
+    sigma ~ cauchy(0,1),
+    b ~ normal(0,1)
+  ), data=UCBadmit )
+
+stancode(m_glmm1)
+
+
+precis(m_glmm1)

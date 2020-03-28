@@ -1,0 +1,22 @@
+library(rstan)
+library(rethinking)
+library(bayesplot)
+renv::install("tidybayes")
+library(tidybayes)
+compose_data(UCBadmit)
+compose_data(UCBadmit)
+data( UCBadmit )
+UCBadmit$male <- as.integer(UCBadmit$applicant.gender=="male")
+UCBadmit$dept <- rep( 1:6 , each=2 )
+UCBadmit$applicant.gender <- NULL
+compose_data(UCBadmit)
+UCBadmit
+compose_data(UCBadmit)
+compose_data(UCBadmit) %>% append(N_dept =12)
+library(tidyverse)
+compose_data(UCBadmit) %>% append(N_dept =12)
+compose_data(UCBadmit) %>% append(list(N_dept =12))
+compose_data(UCBadmit) %>% append(list(N_dept =6)) %>% append(list(N =12))
+compose_data(UCBadmit) %>% append(list(N_dept =6)) %>% append(list(N =12)) %>% .[-6]
+model_data = compose_data(UCBadmit) %>% append(list(N_dept =6)) %>% append(list(N =12)) %>% .[-6]
+model_data
